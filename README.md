@@ -256,6 +256,6 @@ npm run migrate:storage -- --execute
 
 # 10. Team Members & Registration Numbers
 
-- **Uday Bavireddy--**241FA04283
--**P.Sathwik     --**241FA04E19
--**T.Hari Krishna--**241FA04348
+- Uday Bavireddy-- 241FA04283
+- P.Sathwik     -- 241FA04E19
+- T.Hari Krishna-- 241FA04348
