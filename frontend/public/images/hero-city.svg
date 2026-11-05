@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E5F4F1" />
+      <stop offset="60%" stop-color="#F1F8F6" />
+      <stop offset="100%" stop-color="#F7FAF9" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#E6A94A" />
+    </linearGradient>
+    <linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+    <linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#137C72" />
+      <stop offset="100%" stop-color="#0F665E" />
+    </linearGradient>
+    <linearGradient id="buildingGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3977A8" />
+      <stop offset="100%" stop-color="#26557C" />
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" rx="20" fill="url(#skyGrad)" />
+
+  <!-- Sun / Morning Glow -->
+  <circle cx="680" cy="110" r="54" fill="url(#sunGrad)" opacity="0.85" filter="url(#softGlow)" />
+  <circle cx="680" cy="110" r="42" fill="#E6A94A" opacity="0.9" />
+
+  <!-- Distant Skyline Silhouettes -->
+  <path d="M40 380 L40 280 L75 280 L75 240 L120 240 L120 380 Z" fill="#D5E3E0" />
+  <path d="M125 380 L125 210 L160 210 L160 190 L180 160 L200 190 L200 380 Z" fill="#C2D6D2" />
+  <path d="M210 380 L210 260 L270 260 L270 380 Z" fill="#D5E3E0" />
+  <path d="M520 380 L520 220 L570 220 L570 180 L610 180 L610 380 Z" fill="#C2D6D2" />
+  <path d="M620 380 L620 270 L670 270 L670 380 Z" fill="#D5E3E0" />
+  <path d="M680 380 L680 230 L730 230 L730 380 Z" fill="#C2D6D2" />
+
+  <!-- Midground City Buildings -->
+  <!-- Civic Municipal Hall -->
+  <rect x="290" y="160" width="180" height="220" rx="8" fill="#FFFFFF" stroke="#DCE7E4" stroke-width="2" />
+  <!-- Glass windows on Municipal building -->
+  <rect x="310" y="185" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="350" y="185" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="390" y="185" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="430" y="185" width="20" height="30" rx="4" fill="#E5F4F1" />
+
+  <rect x="310" y="230" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="350" y="230" width="30" height="30" rx="4" fill="#137C72" opacity="0.3" />
+  <rect x="390" y="230" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="430" y="230" width="20" height="30" rx="4" fill="#E5F4F1" />
+
+  <rect x="310" y="275" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="350" y="275" width="30" height="30" rx="4" fill="#E5F4F1" />
+  <rect x="390" y="275" width="30" height="30" rx="4" fill="#E6A94A" opacity="0.4" />
+  <rect x="430" y="275" width="20" height="30" rx="4" fill="#E5F4F1" />
+
+  <!-- Building 2: Civic Tech Hub -->
+  <rect x="140" y="210" width="130" height="170" rx="6" fill="#137C72" />
+  <rect x="160" y="230" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="195" y="230" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="230" y="230" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="160" y="275" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="195" y="275" width="20" height="25" rx="3" fill="#FDE68A" opacity="0.9" />
+  <rect x="230" y="275" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="160" y="320" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="195" y="320" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+  <rect x="230" y="320" width="20" height="25" rx="3" fill="#E5F4F1" opacity="0.8" />
+
+  <!-- Green rooftop garden on Municipal building -->
+  <rect x="280" y="152" width="200" height="12" rx="6" fill="#24845B" />
+  <circle cx="340" cy="148" r="8" fill="#24845B" />
+  <circle cx="410" cy="146" r="10" fill="#24845B" />
+
+  <!-- Modern Public Library / Community Center -->
+  <rect x="490" y="240" width="150" height="140" rx="8" fill="#FFFFFF" stroke="#DCE7E4" stroke-width="2" />
+  <path d="M490 240 L565 210 L640 240 Z" fill="#3977A8" />
+  <rect x="515" y="260" width="45" height="40" rx="4" fill="#E5F4F1" />
+  <rect x="575" y="260" width="45" height="40" rx="4" fill="#E5F4F1" />
+  <rect x="515" y="315" width="45" height="40" rx="4" fill="#E5F4F1" />
+  <rect x="575" y="315" width="45" height="40" rx="4" fill="#E5F4F1" />
+
+  <!-- Park & Greenery Ground -->
+  <path d="M0 380 Q200 370 400 375 T800 380 L800 440 L0 440 Z" fill="#24845B" opacity="0.12" />
+  <path d="M0 400 Q250 390 500 395 T800 400 L800 440 L0 440 Z" fill="#24845B" opacity="0.2" />
+
+  <!-- Urban Road & Sidewalk -->
+  <rect x="0" y="440" width="800" height="160" fill="url(#roadGrad)" />
+  <!-- Sidewalk curb -->
+  <rect x="0" y="430" width="800" height="14" fill="#CBD5E1" />
+  <line x1="0" y1="444" x2="800" y2="444" stroke="#94A3B8" stroke-width="2" />
+  
+  <!-- Road Markings (Pedestrian Crossing & Lane lines) -->
+  <line x1="40" y1="520" x2="140" y2="520" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="16, 16" />
+  <line x1="200" y1="520" x2="300" y2="520" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="16, 16" />
+  <line x1="360" y1="520" x2="460" y2="520" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="16, 16" />
+  <line x1="520" y1="520" x2="620" y2="520" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="16, 16" />
+  <line x1="680" y1="520" x2="780" y2="520" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="16, 16" />
+
+  <!-- Modern Smart Street Light -->
+  <path d="M90 435 L90 280 Q90 260 110 260 L130 260" stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none" />
+  <ellipse cx="130" cy="265" rx="10" ry="4" fill="#E6A94A" />
+  <!-- Glow from street light -->
+  <polygon points="120,270 140,270 170,435 90,435" fill="#FEF3C7" opacity="0.25" />
+
+  <!-- Park Trees -->
+  <circle cx="680" cy="390" r="28" fill="#24845B" />
+  <circle cx="700" cy="375" r="22" fill="#2F9E6C" />
+  <rect x="686" y="405" width="8" height="26" rx="2" fill="#78350F" />
+
+  <circle cx="60" cy="400" r="24" fill="#24845B" />
+  <circle cx="45" cy="385" r="18" fill="#2F9E6C" />
+  <rect x="52" y="415" width="6" height="20" rx="2" fill="#78350F" />
+
+  <!-- Clean Waste & Recycling Station (Civic infrastructure) -->
+  <rect x="250" y="405" width="20" height="26" rx="3" fill="#137C72" />
+  <rect x="274" y="405" width="20" height="26" rx="3" fill="#3977A8" />
+  <rect x="298" y="405" width="20" height="26" rx="3" fill="#24845B" />
+  <circle cx="260" cy="414" r="3" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="284" cy="414" r="3" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="308" cy="414" r="3" fill="#FFFFFF" opacity="0.8" />
+
+  <!-- AI Civic Inspection Pulse Badge (Floating UI element) -->
+  <g transform="translate(480, 100)">
+    <rect width="260" height="72" rx="14" fill="#FFFFFF" filter="url(#softGlow)" stroke="#DCE7E4" stroke-width="1.5" />
+    <circle cx="36" cy="36" r="18" fill="#E5F4F1" />
+    <circle cx="36" cy="36" r="8" fill="#137C72" />
+    <circle cx="36" cy="36" r="14" stroke="#137C72" stroke-width="1.5" opacity="0.4" />
+    <text x="66" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#172B2A">AI Triage Active</text>
+    <text x="66" y="50" font-family="'Inter', sans-serif" font-size="11.5" font-weight="500" fill="#657674">Smart civic routing in real time</text>
+  </g>
+
+  <!-- Issue Resolved Card (Floating UI element) -->
+  <g transform="translate(70, 110)">
+    <rect width="240" height="66" rx="14" fill="#FFFFFF" filter="url(#softGlow)" stroke="#DCE7E4" stroke-width="1.5" />
+    <rect x="16" y="18" width="30" height="30" rx="8" fill="#EBF8F2" />
+    <path d="M25 33 L30 38 L38 27" stroke="#24845B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="56" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#172B2A">Report #CV-2041</text>
+    <text x="56" y="49" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#24845B">RESOLVED • 4h turnaround</text>
+  </g>
+</svg>

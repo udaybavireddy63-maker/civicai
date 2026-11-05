@@ -1,0 +1,61 @@
+/* ==========================================================================
+   CivicSense AI — Dashboard Shell Layout (Sidebar-Free Top Navigation)
+   ========================================================================== */
+
+.civic-dash {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Main Content Area */
+.civic-dash__content {
+  flex: 1;
+  padding: 2rem 1.5rem 3rem;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Subtle Dashboard Footer */
+.civic-dash__footer {
+  margin-top: auto;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 1.25rem 1.5rem;
+}
+
+.civic-dash__footer-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.civic-dash__footer-text {
+  font-weight: 500;
+}
+
+.civic-dash__footer-audit {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+}
+
+@media (max-width: 768px) {
+  .civic-dash__content {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .civic-dash__footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

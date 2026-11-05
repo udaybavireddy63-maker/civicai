@@ -1,0 +1,685 @@
+.civic-portal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Banner */
+.civic-portal__banner {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-muted) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.civic-portal__greeting {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.civic-portal__banner-sub {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+/* KPI Grid */
+.civic-portal__kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.civic-kpi-card__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.civic-kpi-card__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.civic-kpi-card__value {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-top: 0.25rem;
+}
+
+.civic-kpi-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.civic-kpi-card__icon--primary {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.civic-kpi-card__icon--warning {
+  background-color: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.civic-kpi-card__icon--success {
+  background-color: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.civic-kpi-card__icon--danger {
+  background-color: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.civic-kpi-card__note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Section Card & Filters */
+.civic-portal__section-card {
+  box-shadow: var(--shadow-sm);
+}
+
+.civic-portal__filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.civic-portal__search {
+  min-width: 240px;
+}
+
+.civic-portal__select {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.civic-portal__select:focus {
+  border-color: var(--color-primary);
+}
+
+/* Reports List (Citizen) */
+.civic-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.civic-report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.civic-report-row:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.civic-report-row__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1;
+}
+
+.civic-report-row__top {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.125rem;
+}
+
+.civic-report-row__ref {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-muted);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.civic-report-row__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.civic-report-row__summary {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.civic-report-row__ai-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.civic-report-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-subtle);
+  margin-top: 0.25rem;
+}
+
+.civic-report-row__loc {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Admin AI Notice */
+.civic-admin-ai-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.125rem 1.5rem;
+  background-color: var(--color-primary-soft);
+  border: 1px solid rgba(19, 124, 114, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.civic-admin-ai-notice__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.civic-admin-ai-notice__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.civic-admin-ai-notice__desc {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* Admin Table */
+.civic-admin-table-card {
+  overflow: hidden;
+}
+
+.civic-admin-table-card__header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.civic-admin-table-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.civic-admin-table-card__subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.civic-admin-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.civic-admin-filters__search {
+  min-width: 240px;
+}
+
+.civic-table-container {
+  overflow-x: auto;
+}
+
+.civic-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.civic-table th {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  padding: 0.875rem 1.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.civic-table td {
+  padding: 1.125rem 1.25rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.civic-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.civic-table tbody tr:hover {
+  background-color: var(--color-surface-muted);
+}
+
+.civic-table__ref {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.civic-table__title-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.civic-table__title {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.civic-table__citizen {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.civic-table__category {
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+.civic-table__ai-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.civic-table__dept {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.civic-table__ai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+
+.civic-table__ai-pill--pending {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.civic-table__ai-pill--failed {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.civic-table__row--high {
+  background-color: rgba(194, 75, 75, 0.03);
+  box-shadow: inset 3.5px 0 0 0 var(--color-danger);
+}
+
+/* Analytics & Visualizations Grid */
+.civic-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.civic-analytics-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Segmented Status Progress Meter */
+.civic-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.civic-meter__track {
+  width: 100%;
+  height: 14px;
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.civic-meter__segment {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.civic-meter__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem 1.25rem;
+}
+
+.civic-meter__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+.civic-meter__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.civic-meter__legend-count {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.civic-meter__legend-pct {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+/* Horizontal Proportional Distribution List */
+.civic-dist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.civic-dist-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.civic-dist-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+}
+
+.civic-dist-item__name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.civic-dist-item__stats {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.civic-dist-item__count {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.civic-dist-bar-track {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.civic-dist-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  transition: width 0.4s ease;
+}
+
+/* Recent Activity Feed */
+.civic-activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.civic-activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.civic-activity-item:hover {
+  background-color: var(--color-surface-muted);
+}
+
+.civic-activity-item__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.civic-activity-item__top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.civic-activity-item__ref {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.civic-activity-item__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.civic-activity-item__time {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+/* Citizen Quick Summary Card */
+.civic-citizen-recent-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-primary-soft);
+  border-radius: var(--radius-md);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1440px) {
+  .civic-portal {
+    max-width: 1360px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .civic-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  .civic-admin-filters {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .civic-portal {
+    gap: 1.5rem;
+  }
+  .civic-portal__banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+  .civic-report-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .civic-report-row__action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .civic-admin-filters {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .civic-admin-filters__search {
+    width: 100%;
+    min-width: auto;
+  }
+  .civic-portal__select {
+    width: 100%;
+  }
+  .civic-citizen-recent-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .civic-portal__kpi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .civic-kpi-card {
+    padding: 0.875rem !important;
+  }
+  .civic-kpi-card__value {
+    font-size: 1.75rem;
+  }
+  .civic-kpi-card__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .civic-kpi-card__note {
+    font-size: 0.6875rem;
+  }
+  .civic-activity-item__title {
+    max-width: 180px;
+  }
+  /* 44px touch targets on mobile */
+  .civic-portal__select,
+  .civic-portal__search input,
+  .civic-admin-filters__search input {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 360px) {
+  .civic-portal__kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  .civic-portal__greeting {
+    font-size: 1.25rem;
+  }
+  .civic-portal__banner-sub {
+    font-size: 0.8125rem;
+  }
+  .civic-activity-item__title {
+    max-width: 130px;
+  }
+}

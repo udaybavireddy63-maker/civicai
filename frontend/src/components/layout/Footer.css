@@ -1,0 +1,132 @@
+.civic-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 4rem 0 2rem;
+  margin-top: auto;
+}
+
+.civic-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.civic-footer__col--brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.civic-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.civic-footer__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.civic-footer__description {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  max-width: 360px;
+}
+
+.civic-footer__badges {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+
+.civic-footer__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  border-radius: var(--radius-pill);
+}
+
+.civic-footer__heading {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.civic-footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.civic-footer__links a,
+.civic-footer__links li {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.civic-footer__links a:hover {
+  color: var(--color-primary);
+}
+
+.civic-footer__privacy-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.civic-footer__bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.civic-footer__copy {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.civic-footer__sublinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-subtle);
+}
+
+@media (max-width: 992px) {
+  .civic-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .civic-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .civic-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,75 @@
+.civic-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.civic-brand__link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-fast, 0.2s ease);
+}
+
+.civic-brand__link:hover {
+  opacity: 0.92;
+}
+
+.civic-brand__icon {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(19, 124, 114, 0.15);
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.civic-brand__link:hover .civic-brand__icon {
+  transform: translateY(-1px);
+}
+
+.civic-brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.civic-brand__title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-weight: 800;
+  color: var(--color-text, #173B38);
+  letter-spacing: -0.02em;
+}
+
+.civic-brand--sm .civic-brand__title {
+  font-size: 1.125rem;
+}
+
+.civic-brand--md .civic-brand__title {
+  font-size: 1.25rem;
+}
+
+.civic-brand--lg .civic-brand__title {
+  font-size: 1.45rem;
+}
+
+.civic-brand--xl .civic-brand__title {
+  font-size: 1.65rem;
+}
+
+.civic-brand__accent {
+  background: linear-gradient(135deg, #E9B65A 0%, #D99B38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.civic-brand__tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary, #137C72);
+  margin-top: 0.15rem;
+}

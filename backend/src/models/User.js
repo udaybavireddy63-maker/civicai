@@ -1,0 +1,66 @@
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+const { USER_ROLES } = require('../constants');
+
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, 'User name is required'],
+      trim: true,
+      minlength: [2, 'Name must be at least 2 characters'],
+      maxlength: [100, 'Name cannot exceed 100 characters']
+    },
+    email: {
+      type: String,
+      required: [true, 'Email address is required'],
+      unique: true,
+      lowercase: true,
+      trim: true,
+      match: [
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        'Please provide a valid email address'
+      ],
+      index: true
+    },
+    passwordHash: {
+      type: String,
+      required: [true, 'Password hash is required']
+    },
+    role: {
+      type: String,
+      enum: {
+        values: Object.values(USER_ROLES),
+        message: '{VALUE} is not a valid user role'
+      },
+      default: USER_ROLES.CITIZEN,
+      index: true
+    }
+  },
+  {
+    timestamps: true
+  }
+);
+
+// Method to verify password against bcrypt hash
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  if (!this.passwordHash) return false;
+  return bcrypt.compare(candidatePassword, this.passwordHash);
+};
+
+// Static helper to hash passwords
+userSchema.statics.hashPassword = async function (plainPassword) {
+  const salt = await bcrypt.genSalt(10);
+  return bcrypt.hash(plainPassword, salt);
+};
+
+// Ensure passwordHash is never returned in JSON output
+userSchema.methods.toJSON = function () {
+  const obj = this.toObject();
+  delete obj.passwordHash;
+  return obj;
+};
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;

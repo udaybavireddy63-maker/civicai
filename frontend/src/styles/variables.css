@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+
+  /* Brand Colors */
+  --color-primary: #137C72;
+  --color-primary-hover: #0F625B;
+  --color-primary-dark: #0F625B;
+  --color-primary-soft: #E5F4F1;
+  --color-accent: #E9B65A;
+  --color-accent-hover: #D49635;
+  --color-accent-soft: #FEF7ED;
+
+  /* Surfaces & Backgrounds */
+  --color-background: #F7FAF9;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #EEF4F2;
+  --color-surface-alt: #F1F6F4;
+
+  /* Typography */
+  --color-text: #173B38;
+  --color-text-muted: #647A76;
+  --color-text-subtle: #8E9F9D;
+
+  /* Borders & Dividers */
+  --color-border: #E4ECE9;
+  --color-border-subtle: #EBF2F0;
+  --color-border-hover: #BED2CE;
+
+  /* Semantic Feedback */
+  --color-success: #24845B;
+  --color-success-soft: #EBF8F2;
+  --color-warning: #B7791F;
+  --color-warning-soft: #FEF7EE;
+  --color-danger: #C24B4B;
+  --color-danger-soft: #FDF2F2;
+  --color-info: #3977A8;
+  --color-info-soft: #F0F6FB;
+
+  /* Status Colors */
+  --status-submitted: #3977A8;
+  --status-submitted-bg: #F0F6FB;
+  --status-under-review: #B7791F;
+  --status-under-review-bg: #FEF7EE;
+  --status-assigned: #6366F1;
+  --status-assigned-bg: #EEF2FF;
+  --status-in-progress: #137C72;
+  --status-in-progress-bg: #E5F4F1;
+  --status-resolved: #24845B;
+  --status-resolved-bg: #EBF8F2;
+  --status-rejected: #C24B4B;
+  --status-rejected-bg: #FDF2F2;
+
+  /* Priority Colors */
+  --priority-low: #24845B;
+  --priority-low-bg: #EBF8F2;
+  --priority-medium: #B7791F;
+  --priority-medium-bg: #FEF7EE;
+  --priority-high: #C24B4B;
+  --priority-high-bg: #FDF2F2;
+
+  /* Typography Fonts */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+  --radius-input: 10px;
+  --radius-button: 10px;
+  --radius-card: 16px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(23, 43, 42, 0.04);
+  --shadow-sm: 0 2px 4px rgba(23, 43, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(23, 43, 42, 0.06);
+  --shadow-lg: 0 10px 24px rgba(23, 43, 42, 0.08);
+  --shadow-xl: 0 20px 32px rgba(23, 43, 42, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Max widths */
+  --container-max-width: 1240px;
+}
