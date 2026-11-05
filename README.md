@@ -251,3 +251,11 @@ npm run migrate:storage -- --execute
 - **Advisory AI Only:** Machine recommendations assist human operators; all official assignments and status changes require verified municipal staff authorization.
 - **Privacy by Design:** Resident emails and passwords are never exposed; staff internal notes are strictly segregated from public audit records.
 - **Light Mode Accessibility:** High-contrast text, clear visual cues, responsive mobile layouts ($\ge 44\text{px}$ touch targets), and graceful error states.
+
+---
+
+# 10. Team Members & Registration Numbers
+
+-Uday Bavireddy--241FA04283
+-P.Sathwik     --241FA04E19
+-T.Hari Krishna--241FA04348
